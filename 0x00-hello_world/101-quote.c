@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistdio.h>
+#include <unistd.h>
 /**
  * main - Using fput function
  * Return: 1 (Success)
