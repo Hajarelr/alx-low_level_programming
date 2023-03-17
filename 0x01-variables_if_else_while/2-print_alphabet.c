@@ -4,8 +4,8 @@
  * Return: 0 (Success)
  */
 int main(void)
+int c;
 {
-char c;
 c = 'a';
 while
 (c <= 'z')
@@ -13,6 +13,6 @@ while
 putchar(c);
 c++;
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
