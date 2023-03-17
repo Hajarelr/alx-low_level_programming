@@ -5,10 +5,12 @@
  */
 int main(void)
 {
-	char c;
-while(c = 'a' ; c <= 'z' ; c++)
-putchar(c);
-}
+	int n = 97;
+while (n <= 122)
+{
+putchar(n);
+n++;
 putchar('\n');
+}
 return (0);
 }
