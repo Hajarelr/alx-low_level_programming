@@ -4,14 +4,10 @@
  * Return: 0 (Success)
  */
 int main(void)
-int c;
 {
-c = 'a';
-while
-(c <= 'z')
-{
+	char c;
+while(c = 'a' ; c <= 'z' ; c++)
 putchar(c);
-c++;
 }
 putchar('\n');
 return (0);
