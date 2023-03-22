@@ -32,7 +32,7 @@ e %= 10000000000;
 }
 printf("%lu%lu", d, e);
 if (a != 98)
-printf(",");
+printf(", ");
 bd = cd;
 be = ce;
 cd = d;
