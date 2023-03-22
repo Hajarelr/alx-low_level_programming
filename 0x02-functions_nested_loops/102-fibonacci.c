@@ -16,7 +16,7 @@ printf(", %ld", c);
 else
 {
 c += b;
-b = c - a;
+b = c - b;
 printf(", %ld", c);
 }
 ++a;
