@@ -30,6 +30,8 @@ if (be + ce > 9999999999)
 d += 1;
 e %= 10000000000;
 }
+printf("%lu%lu", d, e);
+if (a != 98)
 printf(",");
 bd = cd;
 be = ce;
