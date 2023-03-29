@@ -11,7 +11,7 @@ int o = 0;
 char k;
 while (*(n + m) != '\0')
 {
-m++;	
+m++;
 }
 m--;
 for (o = 0; o < m; o++, m--)
