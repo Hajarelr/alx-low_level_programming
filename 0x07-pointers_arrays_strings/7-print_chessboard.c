@@ -2,12 +2,11 @@
 /**
  * print_chessboard - Function that print the chessboard
  * @a: Array
-sh: 1: q: not found
+ * Return: void
  */
 void print_chessboard(char (*a)[8])
 {
-int n;
-int m;
+int n, m;
 for (n = 0 ; n < 8 ; n++)
 {
 for (m = 0 ; m < 8 ; m++)
