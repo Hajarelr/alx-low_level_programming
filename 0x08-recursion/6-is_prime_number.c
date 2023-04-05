@@ -15,7 +15,7 @@ return (check_prime(n, 1));
  * check_prime - Function that checks if a number is prime number
  * @n: The number to be checked
  * @i: The number of iterations
- * Return 1 for prime or 0 composite
+ * Return: 1 for prime or 0 composite
  */
 int check_prime(int n, int i)
 {
