@@ -16,7 +16,7 @@ while (str[m])
 {
 m++;
 }
-o = malloc((sizeof(char) * m) + 1);
+o = malloc((sizeof(char) * m) +1);
 if (o == NULL)
 return (NULL);
 while (n < m)
