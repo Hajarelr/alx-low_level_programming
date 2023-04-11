@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * allox_grid - Fuctin that returns a pointer to a 2 dimensional array
+ * alloc_grid - Fuctin that returns a pointer to a 2 dimensional array
  * of integers
  * @width: 1st input
  * @height: 2nd input
