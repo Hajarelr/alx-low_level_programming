@@ -62,7 +62,7 @@ if (!v)
 return (1);
 for (r = 0; r <= o + p; r++)
 v[r] = 0;
-for (o = p - 1; o >= 0; o--)
+for (o = o - 1; o >= 0; o--)
 {
 t = n[o] - '0';
 s = 0;
