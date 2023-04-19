@@ -9,7 +9,8 @@
 int main(int argc, char *argv[])
 {
 int n, m;
-char *o;
+int (*o)(int, char **) = main;
+unsigned char p;
 if (argc != 2)
 {
 printf("Error\n");
@@ -21,15 +22,15 @@ if (n < 0)
 printf("Error\n");
 exit(2);
 }
-o = (char *)main;
 for (m = 0 ; m < n ; m++)
 {
+p = *(unsigned char *)o;
+printf("%.2x", p);
 if (m == n - 1)
-{
-printf("%02hhx\n", o[m]);
-break;
+continue;
+printf(" ");
+o++;
 }
-printf("%02hhx", o[m]);
-}
+printf("\n");
 return (0);
 }
