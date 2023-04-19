@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Function that prints its own opcodes
+ * main - Function that converts arguments to int
  * @argc: Number of arguments
  * @argv: Array of arguments
  * Return: 0 (Success)
