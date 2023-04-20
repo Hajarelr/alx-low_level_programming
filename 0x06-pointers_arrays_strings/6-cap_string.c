@@ -2,7 +2,7 @@
 /**
  * cap_string - Function that capitalizes all words of a string
  * @str: The string to be capitalized
- * Return: A pointer to the changed string
+ * Return: A pointer to string
  */
 char *cap_string(char *str)
 {
@@ -12,8 +12,8 @@ while (str[m])
 while (!(str[m] >= 'a' && str[m] <= 'z'))
 m++;
 if (str[m - 1] == ' ' ||
-str[m - 1] == '\t' ||
-str[m - 1] == '\n' ||
+str[m - 1] =='\t' ||
+str[m - 1] =='\n' ||
 str[m - 1] == ',' ||
 str[m - 1] == ';' ||
 str[m - 1] == '.' ||
