@@ -27,7 +27,7 @@ if (m == NULL)
 }
 else
 {
-while (n->next != NULL)
+while (m->next != NULL)
 m = m->next;
 m->next = n;
 }
