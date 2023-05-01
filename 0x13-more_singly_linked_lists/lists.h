@@ -3,7 +3,8 @@
 #include <stdlib.h>
 /**
  * struct listint_s - The singly linked list
- * @a: 1st integer
+ * @n: 1st input
+ * @next: 2nd input
  */
 typedef struct listint_s
 {
