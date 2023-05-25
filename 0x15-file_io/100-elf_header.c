@@ -1,5 +1,6 @@
 #include "main.h"
 #include <elf.h>
+void print_osabi_more(Elf64_Ehdr h);
 /**
  * print_magic - Function that prints the magic numbers
  * @h: Elf Header
@@ -63,7 +64,7 @@ printf("\n");
  */
 void print_version(Elf64_Ehdr h)
 {
-printf(" Version:                           %d", h.e_ident[EI_VERSION]);
+printf("  Version:                           %d", h.e_ident[EI_VERSION]);
 switch (h.e_ident[EI_VERSION])
 {
 case EV_CURRENT:
@@ -112,10 +113,38 @@ printf("UNIX - FreeBSD");
 break;
 case ELFOSABI_TRU64:
 printf("UNIX - TRU64");
-
+break;
+default:
+print_osabi_more(h);
 break;
 }
 printf("\n");
+}
+/**
+ * print_osabi_more - Function that prints ELF osabi more
+ * @h: ELF HEADER
+ * rReturn: Void
+ */
+void print_osabi_more(Elf64_Ehdr h)
+{
+switch (h.e_ident[EI_OSABI])
+{
+case ELFOSABI_MODESTO:
+printf("UNIX - Modesto");
+break;
+case ELFOSABI_OPENBSD:
+printf ("UNIX - OpenBSD");
+break;
+case ELFOSABI_STANDALONE:
+printf("Standalone App");
+break;
+case ELFOSABI_ARM:
+printf("ARM");
+break;
+default:
+printf("<unknown: %x>", h.e_ident[EI_OSABI]);
+break;
+}
 }
 /**
  * print_abi - Function that prints the ABI version
@@ -124,8 +153,7 @@ printf("\n");
  */
 void print_abi(Elf64_Ehdr h)
 {
-printf("  ABI Version:                       %d\n",
-h.e_ident[EI_ABIVERSION]);
+printf("  ABI Version:                       %d\n", h.e_ident[EI_ABIVERSION]);
 }
 /**
  * print_type - Function that prints the type of an ELF
