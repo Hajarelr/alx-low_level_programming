@@ -8,7 +8,7 @@
 void print_magic(Elf64_Ehdr h)
 {
 int a;
-printf(" Magic: ");
+printf("  Magic:   ");
 for (a = 0 ; a < EI_NIDENT ; a++)
 printf("%2.2x%s", h.e_ident[a], a == EI_NIDENT - 1 ? "\n" : " ");
 }
@@ -19,7 +19,7 @@ printf("%2.2x%s", h.e_ident[a], a == EI_NIDENT - 1 ? "\n" : " ");
  */
 void print_class(Elf64_Ehdr h)
 {
-printf(" Class: ");
+printf("  Class:                             ");
 switch (h.e_ident[EI_CLASS])
 {
 case ELFCLASS64:
@@ -112,6 +112,7 @@ printf("UNIX - FreeBSD");
 break;
 case ELFOSABI_TRU64:
 printf("UNIX - TRU64");
+
 break;
 }
 printf("\n");
@@ -210,10 +211,10 @@ if (ac != 2)
 dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
 a = open(av[1], O_RDONLY);
 if (a == -1)
-dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]), exit(98);
+dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]), exit(98);
 c = read(a, &h, sizeof(h));
 if (c < 1 || c != sizeof(h))
-dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]), exit(98);
+dprintf(STDERR_FILENO, "Can't read from file: %s\n", av[1]), exit(98);
 if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L' &&
 	h.e_ident[3] == 'F')
 {
