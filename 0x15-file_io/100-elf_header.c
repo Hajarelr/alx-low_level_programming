@@ -133,7 +133,7 @@ case ELFOSABI_MODESTO:
 printf("UNIX - Modesto");
 break;
 case ELFOSABI_OPENBSD:
-printf ("UNIX - OpenBSD");
+printf("UNIX - OpenBSD");
 break;
 case ELFOSABI_STANDALONE:
 printf("Standalone App");
