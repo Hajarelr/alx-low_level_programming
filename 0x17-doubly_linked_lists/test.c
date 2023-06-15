@@ -6,16 +6,16 @@ static int test_palindromic(unsigned int n);
  */
 int main(void)
 {
-unsigned int i, j, max = 0;
-for (i = 100; i <= 999; i++) {
-for (j = 100; j <= 999; j++) {
-unsigned int p = i*j;
-if (test_palindromic(p) && p > max) {
-max = p;
+unsigned int a, b, c = 0;
+for (a = 100; a <= 999; a++) {
+for (b = 100; b <= 999; b++) {
+unsigned int d = a*b;
+if (test_palindromic(d) && d > c) {
+c = d;
 }
 }
 }
-printf("%u\n", max);
+printf("%u\n", c);
 return (0);
 }
 /**
@@ -25,10 +25,11 @@ return (0);
  */
 int test_palindromic(unsigned int n)
 {
-unsigned int reversed_num = 0, t = n;
-while (t) {
-reversed_num = 10*reversed_num + (t % 10);
-t /= 10;
+unsigned int r = 0, s = n;
+while (s) 
+{
+r = 10*r + (s % 10);
+s /= 10;
 }
-return (reversed_num == n);
+return (r == n);
 }
