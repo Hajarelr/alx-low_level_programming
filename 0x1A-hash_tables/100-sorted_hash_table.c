@@ -154,7 +154,8 @@ a = a->next;
 printf("}\n");
 }
 /**
- * shash_table_print_rev - Function that prints the key/value from ht in reverse
+ * shash_table_print_rev - Function that prints the key/value from ht
+ * in reverse
  * @ht: Pointer to shash table
  * Return: Void
  */
