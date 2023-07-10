@@ -36,26 +36,26 @@ ht->stail->snext = new_node;
 ht->stail = new_node;
 }
 /**
- * shash_table_create - Function that creates a sorted hash tables
- * @size: The size of the hash table
- * Return: The pointer to hash table
+ * shash_table_create - Function that creates a sorted shash tables
+ * @size: The size of the shash table
+ * Return: The pointer to shash table
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-shash_table_t *ht;
+shash_table_t *n;
 if (size == 0)
 return (NULL);
-ht = calloc(1, sizeof(shash_table_t));
-if (ht == NULL)
+n = calloc(1, sizeof(shash_table_t));
+if (n == NULL)
 return (NULL);
-ht->size = size;
-ht->array = calloc(size, sizeof(shash_node_t *));
-if (ht->array == NULL)
+n->size = size;
+n->array = malloc(size, sizeof(shash_node_t *));
+if (n->array == NULL)
 {
-free(ht);
+free(n);
 return (NULL);
 }
-return (ht);
+return (n);
 }
 /**
  * shash_table_set - Function that adds an element to the shash table
