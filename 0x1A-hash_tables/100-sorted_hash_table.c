@@ -42,20 +42,20 @@ ht->stail = new_node;
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
-shash_table_t *n;
+shash_table_t *ht;
 if (size == 0)
 return (NULL);
-n = calloc(1, sizeof(shash_table_t));
-if (n == NULL)
+ht = calloc(1, sizeof(shash_table_t));
+if (ht == NULL)
 return (NULL);
-n->size = size;
-n->array = calloc(size, sizeof(shash_node_t *));
-if (n->array == NULL)
+ht->size = size;
+ht->array = calloc(size, sizeof(shash_node_t *));
+if (ht->array == NULL)
 {
-free(n);
+free(ht);
 return (NULL);
 }
-return (n);
+return (ht);
 }
 /**
  * shash_table_set - Function that adds an element to the shash table
