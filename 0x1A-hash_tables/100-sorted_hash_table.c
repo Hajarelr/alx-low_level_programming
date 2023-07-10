@@ -49,7 +49,7 @@ n = calloc(1, sizeof(shash_table_t));
 if (n == NULL)
 return (NULL);
 n->size = size;
-n->array = malloc(size, sizeof(shash_node_t *));
+n->array = calloc(size, sizeof(shash_node_t *));
 if (n->array == NULL)
 {
 free(n);
