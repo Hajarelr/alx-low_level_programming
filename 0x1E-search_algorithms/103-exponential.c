@@ -5,7 +5,7 @@
   * @left: The starting index of the [sub]array to search
   * @right: The ending index of the [sub]array to search
   * @value: The value to search for
-  * Return: If the value is not present or the array is NULL -1 
+  * Return: If the value is not present or the array is NULL -1
   * Otherwise, the index where the value is located
   */
 int _binary_search(int *array, size_t left, size_t right, int value)

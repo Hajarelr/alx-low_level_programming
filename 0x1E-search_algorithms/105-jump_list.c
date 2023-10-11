@@ -5,7 +5,7 @@
  * @list: A pointer to the  head of the linked list to search
  * @size: The number of nodes in the list
  * @value: The value to search for
- * Return: If the value is not present or the head of the list is NULL return 
+ * Return: If the value is not present or the head of the list is NULL return
  * NULL otherwise a pointer to the first node where the value is located
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
